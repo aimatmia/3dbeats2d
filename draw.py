@@ -11,14 +11,8 @@ def add_box( points, x, y, z, width, height, depth ):
      x+width, y, z+depth)
     (x+width, y-height, z+depth
      x, y-height, z+dept)
-    
-    
-    
- 
-
-def add_sphere( points, cx, cy, cz, r, step ):
-    pass
-def generate_sphere( points, cx, cy, cz, r, step ):
+   
+  def generate_sphere( points, cx, cy, cz, r, step ):
     pass
 
 def add_torus( points, cx, cy, cz, r0, r1, step ):
