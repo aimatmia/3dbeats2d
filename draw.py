@@ -16,9 +16,16 @@ def add_box( points, x, y, z, width, height, depth ):
     pass
 
 def add_torus( points, cx, cy, cz, r0, r1, step ):
-    pass
+    #spin x or y azis
 def generate_torus( points, cx, cy, cz, r0, r1, step ):
-    pass
+    #spin x or y axis
+    #draw_edge(points, x, y, z, px, py, pz)
+    x = cx
+    y =cy
+    z = cz
+    px = cx * math.cos()  
+    py = cy * math.sin()
+    pz= cz
 
 def add_circle( points, cx, cy, cz, r, step ):
     x0 = r + cx
