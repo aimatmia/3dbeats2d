@@ -28,12 +28,6 @@ def generate_sphere( points, cx, cy, cz, r, step ):
             points.append([x,y,z])
     return points
     
-
-def add_torus( points, cx, cy, cz, r0, r1, step ):
-    #spin x or y azis
-    
-    rotate_
-    
 def generate_torus( points, cx, cy, cz, r0, r1, step ):
     #spin x or y axis
     steps = 1/step
@@ -47,6 +41,14 @@ def generate_torus( points, cx, cy, cz, r0, r1, step ):
             points.append([x,y,z])
     return points
 
+
+def add_sphere(points, cx, cy, cz, r, step):
+    points = generate_sphere([],cx,cy,cz,r,step)
+
+def add_torus( points, cx, cy, cz, r0, r1, step ):
+    #spin x or y azis
+    points = generate_torus([],cx,cy,cz,r0,r1,step)
+    
 def add_circle( points, cx, cy, cz, r, step ):
     x0 = r + cx
     y0 = cy
@@ -97,7 +99,6 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
 def add_point( matrix, x, y, z=0 ):
     matrix.append( [x, y, z, 1] )
     
-
 
 
 def draw_line( x0, y0, x1, y1, screen, color ):
