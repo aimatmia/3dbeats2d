@@ -47,17 +47,15 @@ def generate_torus( points, cx, cy, cz, r0, r1, step ):
 
 
 def add_sphere(points, cx, cy, cz, r, step):
-    points = generate_sphere([],cx,cy,cz,r,step)
-    for pt in points:
-        add_edge(points, points[0], points[1], points[2], 
-                 points[0]+1, points[1]+1, points[2]+1)
+    pt = generate_sphere([],cx,cy,cz,r,step)
+    for p in pt:
+        add_edge(points, p[0], p[1], p[2], p[0]+1, p[1]+1, p[2]+1)
 
 def add_torus( points, cx, cy, cz, r0, r1, step ):
     #spin x or y azis
-    points = generate_torus([],cx,cy,cz,r0,r1,step)
-    for pt in points:
-        add_edge(points, points[0], points[1], points[2], 
-                 points[0]+1, points[1]+1, points[2]+1)
+    pt = generate_torus([],cx,cy,cz,r0,r1,step)
+    for p in pt:
+        add_edge(points, p[0], p[1], p[2], p[0]+1, p[1]+1, p[2]+1)
     
 def add_circle( points, cx, cy, cz, r, step ):
     x0 = r + cx
