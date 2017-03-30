@@ -37,7 +37,6 @@ def parse_file( fname, edges, transform, screen, color ):
           elif line == 'rotate':
                #print 'ROTATE\t' + str(args)
                theta = int(args[1]) * (math.pi / 180)
-
                if args[0] == 'x':
                     t = make_rotX(theta)
                elif args[0] == 'y':
@@ -62,11 +61,11 @@ def parse_file( fname, edges, transform, screen, color ):
           elif line == 'display' or line == 'save':
                clear_screen(screen)
                draw_lines(edges, screen, color)
-
                if line == 'display':
                     display(screen)
                else:
                     save_extension(screen, args[0])
+                    
           elif line == 'box':
                add_box(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
           elif line == 'sphere':
