@@ -36,9 +36,9 @@ def generate_torus( points, cx, cy, cz, r0, r1, step ):
     #spin x or y axis
     steps = 1/step
     for i in range(steps):
-        rot = i / float(n)
-        for j in range(n):
-            cir = j / float(n)
+        rot = i / float(steps)
+        for j in range(steps):
+            cir = j / float(steps)
             x = math.cos(circle * 2 * math.pi) * (r0 * math.cos(rot * 2 * math.pi) + r1) + cx
             y = r0 * math.sin(rot * 2 * math.pi) + cy
             z = -math.sin(circle * 2 * math.pi) * (r0 * math.cos(rot * 2 * math.pi) + r1) + cz
