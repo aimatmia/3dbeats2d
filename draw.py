@@ -21,7 +21,7 @@ def add_box( points, x, y, z, width, height, depth ):
     add_edge(points, x+width, y-height, z+depth, x+width, y-height, z)
 
 def generate_sphere( points, cx, cy, cz, r, step ):
-    steps = 1/step
+    steps = int(1/step)
     for i in range(steps):
         rot = i / float(n)
         for j in range(n):
