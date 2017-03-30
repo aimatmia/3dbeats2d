@@ -44,7 +44,7 @@ def parse_file( fname, edges, transform, screen, color ):
                     t = make_rotY(theta)
                else:
                     t = make_rotZ(theta)
-          matrix_mult(t, transform)
+               matrix_mult(t, transform)
 
           elif line == 'circle':
                add_circle(edges, int(args[0]), int(args[1]), args[2], int(args[3]), 0.05)
