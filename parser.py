@@ -3,7 +3,7 @@ from matrix import *
 from draw import *
 
 
-ARG_COMMANDS = [ 'line', 'scale', 'move', 'rotate', 'circle', 'sphere', 'torus', 'hermite', 'bezier', 'save' ]
+ARG_COMMANDS = [ 'line', 'scale', 'move', 'rotate', 'circle', 'box', 'sphere', 'torus', 'hermite', 'bezier', 'save' ]
 
 def parse_file( fname, edges, transform, screen, color ):
      f = open(fname)
@@ -23,8 +23,7 @@ def parse_file( fname, edges, transform, screen, color ):
                add_edge( edges,
                       int(args[0]), int(args[1]), int(args[2]),
                       int(args[3]), int(args[4]), int(args[5]) )
-
-                              
+          
           elif line == 'box':
                add_box(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
           elif line == 'sphere':
