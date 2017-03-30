@@ -24,6 +24,15 @@ def parse_file( fname, edges, transform, screen, color ):
                       int(args[0]), int(args[1]), int(args[2]),
                       int(args[3]), int(args[4]), int(args[5]) )
 
+                              
+          elif line == 'box':
+               add_box(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
+          elif line == 'sphere':
+               add_sphere(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), 0.01)
+          elif line == 'torus':
+               #add_torus
+               add_torus(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), 0.01)
+               
           elif line == 'scale':
                #print 'SCALE\t' + str(args)
                t = make_scale(int(args[0]), int(args[1]), int(args[2]))
@@ -66,12 +75,4 @@ def parse_file( fname, edges, transform, screen, color ):
                else:
                     save_extension(screen, args[0])
                     
-          elif line == 'box':
-               add_box(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
-          elif line == 'sphere':
-               add_sphere(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), 0.01)
-          elif line == 'torus':
-               #add_torus
-               add_torus(edges, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), 0.01)
-          
           c+= 1
