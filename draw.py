@@ -34,7 +34,7 @@ def generate_sphere( points, cx, cy, cz, r, step ):
     
 def generate_torus( points, cx, cy, cz, r0, r1, step ):
     #spin x or y axis
-    steps = 1/step
+    steps = int(1/step)
     for i in range(steps):
         rot = i / float(steps)
         for j in range(steps):
