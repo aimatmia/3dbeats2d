@@ -23,9 +23,9 @@ def add_box( points, x, y, z, width, height, depth ):
 def generate_sphere( points, cx, cy, cz, r, step ):
     steps = int(1/step)
     for i in range(steps):
-        rot = i / float(n)
-        for j in range(n):
-            cir = j / float(n)
+        rot = i / float(steps)
+        for j in range(steps):
+            cir = j / float(steps)
             x = r * math.cos(cir * math.pi) + cx
             y = r * math.sin(cir * math.pi) * math.cos(rot * 2 * pi) + cy
             z = r * math.sin(cir * math.pi) * math.sin(rot * 2 * pi) + cz
@@ -39,9 +39,9 @@ def generate_torus( points, cx, cy, cz, r0, r1, step ):
         rot = i / float(steps)
         for j in range(steps):
             cir = j / float(steps)
-            x = math.cos(circle * 2 * math.pi) * (r0 * math.cos(rot * 2 * math.pi) + r1) + cx
+            x = math.cos(cir * 2 * math.pi) * (r0 * math.cos(rot * 2 * math.pi) + r1) + cx
             y = r0 * math.sin(rot * 2 * math.pi) + cy
-            z = -math.sin(circle * 2 * math.pi) * (r0 * math.cos(rot * 2 * math.pi) + r1) + cz
+            z = -math.sin(cir * 2 * math.pi) * (r0 * math.cos(rot * 2 * math.pi) + r1) + cz
             points.append([x,y,z])
     return points
 
