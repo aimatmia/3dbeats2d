@@ -3,7 +3,7 @@ from matrix import *
 from draw import *
 
 
-ARG_COMMANDS = [ 'line', 'scale', 'move', 'rotate', 'circle', 'hermite', 'bezier', 'save' ]
+ARG_COMMANDS = [ 'line', 'scale', 'move', 'rotate', 'circle', 'sphere', 'torus', 'hermite', 'bezier', 'save' ]
 
 def parse_file( fname, edges, transform, screen, color ):
      f = open(fname)
